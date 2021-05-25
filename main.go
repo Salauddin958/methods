@@ -59,7 +59,7 @@ func (books Books) Modify() {
 	books = append(books, Book{400})
 }
 
-func (books *Books) Modify1() {
+func (books *Books) ModifyBooks() {
 	*books = append(*books, Book{789})
 	(*books)[0].pages = 500
 }
@@ -87,7 +87,7 @@ func main() {
 	var b1 = Books{{123}, {456}}
 	b1.Modify()
 	fmt.Println(b1)
-	b1.Modify1()
+	b1.ModifyBooks()
 	fmt.Println(b1)
 
 }
